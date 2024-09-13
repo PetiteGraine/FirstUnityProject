@@ -1004,7 +1004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dayLight: {fileID: 410087040}
-  dayLengthInSecs: 120
+  DayLengthInSecs: 120
 --- !u!1 &558531852
 GameObject:
   m_ObjectHideFlags: 0
