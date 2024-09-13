@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "TP Unity 3D.sln"
+    "dotnet.defaultSolution": "FirstUnityProject.sln"
 }

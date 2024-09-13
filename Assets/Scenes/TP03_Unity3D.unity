@@ -254,8 +254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a800d3adea165ea44a0d72e317e1e9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsManager: {fileID: 121297953}
-  monsterAnim: {fileID: 121297948}
+  _statsManager: {fileID: 121297953}
+  _monsterAnim: {fileID: 121297948}
 --- !u!65 &121297951
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -403,9 +403,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff299d524f3185442b55231ef1ebcb93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterController: {fileID: 237748589}
-  playerCamera: {fileID: 330585545}
-  orientation: {fileID: 237748594}
+  _characterController: {fileID: 237748589}
+  _playerCamera: {fileID: 330585545}
+  _orientation: {fileID: 237748594}
   moveSpeed: 10
   jumpForce: 10
   gravity: -10
@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d1df362e71a1a42a5a6a992b18fbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAnim: {fileID: 1577545513}
+  _playerAnim: {fileID: 1577545513}
 --- !u!114 &237748596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb912c06295fc2a45ac72ea5a51045f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statsManager: {fileID: 237748598}
+  _statsManager: {fileID: 237748598}
 --- !u!65 &237748597
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -784,7 +784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f859def768c7eea4db07a34f467d55e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayLight: {fileID: 410087040}
+  _dayLight: {fileID: 410087040}
   dayLengthInSecs: 120
 --- !u!1 &676310850
 GameObject:
