@@ -4,7 +4,6 @@ public class MonsterAttack : MonoBehaviour
 {
     [SerializeField] private StatsManager _statsManager;
     [SerializeField] private Animator _monsterAnim;
-
     private float _attackLenght = 0;
     private bool _canAttack = false;
 
@@ -20,6 +19,7 @@ public class MonsterAttack : MonoBehaviour
             _monsterAnim.SetBool("isAttacking", true);
         }
     }
+
     void OnTriggerStay(Collider collision)
     {
         if (collision.CompareTag("Player"))
@@ -45,6 +45,4 @@ public class MonsterAttack : MonoBehaviour
             _monsterAnim.SetBool("isAttacking", false);
         }
     }
-
-
 }

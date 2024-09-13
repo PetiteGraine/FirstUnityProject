@@ -5,17 +5,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private CharacterController _characterController;
     [SerializeField] private Camera _playerCamera;
     [SerializeField] private Transform _orientation;
-    public float moveSpeed = 10f;
-    public float jumpForce = 10f;
-    public float gravity = -10f;
-    public float zoomSpeed = 2.0f;
-    public float minZoom = 20.0f;
-    public float maxZoom = 60.0f;
+    public float MoveSpeed = 10f;
+    public float JumpForce = 12f;
+    public float Gravity = -10f;
+    public float ZoomSpeed = 2.0f;
+    public float MinZoom = 20.0f;
+    public float MaxZoom = 60.0f;
     private float _horizontal;
     private float _vertical;
     private Vector3 _moveDirection;
     private Vector3 _previousPosition;
-
 
     void Update()
     {
@@ -27,9 +26,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Zoom()
     {
-        _playerCamera.fieldOfView += Input.mouseScrollDelta.y * zoomSpeed;
-        _playerCamera.fieldOfView = Mathf.Clamp(_playerCamera.fieldOfView, minZoom, maxZoom);
+        _playerCamera.fieldOfView += Input.mouseScrollDelta.y * ZoomSpeed;
+        _playerCamera.fieldOfView = Mathf.Clamp(_playerCamera.fieldOfView, MinZoom, MaxZoom);
     }
+
     void Move()
     {
         _horizontal = Input.GetAxisRaw("Horizontal");
@@ -41,10 +41,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && _characterController.isGrounded)
         {
-            _moveDirection.y = jumpForce;
+            _moveDirection.y = JumpForce;
         }
-        _moveDirection.y += gravity * Time.deltaTime;
-        _characterController.Move(_moveDirection * Time.deltaTime * moveSpeed);
+        _moveDirection.y += Gravity * Time.deltaTime;
+        _characterController.Move(_moveDirection * Time.deltaTime * MoveSpeed);
     }
 
     void Cam()

@@ -5,12 +5,13 @@ public class StatsManager : MonoBehaviour
 {
     [SerializeField] private GameObject _entity;
     public Slider healthSlider;
-    public float maxHP = 5f;
-    public float health;
-    public float attackDamage = 1;
+    public float MaxHP = 5f;
+    public float CurrentHP;
+    public float AttackDamage = 1;
+
     void Start()
     {
-        health = maxHP;
+        CurrentHP = MaxHP;
     }
 
     void Update()
@@ -20,15 +21,15 @@ public class StatsManager : MonoBehaviour
 
     void HealthBarUpdate()
     {
-        if (healthSlider.value != health)
+        if (healthSlider.value != CurrentHP)
         {
-            healthSlider.value = health;
+            healthSlider.value = CurrentHP;
         }
     }
 
     public void TakeDamage(float dmg)
     {
-        health -= dmg;
+        CurrentHP -= dmg;
     }
 
     public void DealDamage(GameObject target)
@@ -36,16 +37,16 @@ public class StatsManager : MonoBehaviour
         var atm = target.GetComponent<StatsManager>();
         if (atm != null)
         {
-            atm.TakeDamage(attackDamage);
+            atm.TakeDamage(AttackDamage);
             atm.DestroyIfDead();
         }
     }
 
     public void DestroyIfDead()
     {
-        if (health <= 0)
+        if (CurrentHP <= 0)
         {
-            health = maxHP;
+            CurrentHP = MaxHP;
             // Destroy(_entity);
         }
     }

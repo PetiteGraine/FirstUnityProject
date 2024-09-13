@@ -13,6 +13,7 @@ public class PlayerAnimation : MonoBehaviour
         _jumpLenght = 0;
         _isMovingHash = Animator.StringToHash("isMoving");
     }
+
     void Update()
     {
         Move();

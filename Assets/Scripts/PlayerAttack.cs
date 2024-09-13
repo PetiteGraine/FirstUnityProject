@@ -4,6 +4,7 @@ public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private StatsManager _statsManager;
     private float _attackCooldown = 0;
+
     void Update()
     {
         if (_attackCooldown > 0) _attackCooldown -= Time.deltaTime;

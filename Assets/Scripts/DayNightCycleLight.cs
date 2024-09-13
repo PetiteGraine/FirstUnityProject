@@ -3,20 +3,20 @@ using UnityEngine;
 public class DayLight : MonoBehaviour
 {
     [SerializeField] private Light _dayLight;
-    public float dayLengthInSecs = 60f;
+    public float DayLengthInSecs = 120f;
     private float _currentTime = 0;
     private bool _isCycleComplete = false;
 
     void Start()
     {
-        _currentTime = dayLengthInSecs / 2;
+        _currentTime = DayLengthInSecs / 2;
     }
     void Update()
     {
 
         LightUpdate();
-        if (_currentTime >= dayLengthInSecs || _currentTime <= 0) NextCycle();
-        _dayLight.intensity = _currentTime / dayLengthInSecs * 2;
+        if (_currentTime >= DayLengthInSecs || _currentTime <= 0) NextCycle();
+        _dayLight.intensity = _currentTime / DayLengthInSecs * 2;
     }
 
     void LightUpdate()
